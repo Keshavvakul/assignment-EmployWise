@@ -3,6 +3,8 @@
 Overview
 A modern React application for managing user data with authentication, CRUD operations, and a responsive UI.
 
+### Live Link of the Project: https://assignment-employ-wise-vert.vercel.app/login
+
 ## Installation
 
 ### Frontend Setup (React + Vite + Tailwind)
