@@ -1,54 +1,99 @@
-# React + TypeScript + Vite
+# User Management Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Overview
+A modern React application for managing user data with authentication, CRUD operations, and a responsive UI.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Frontend Setup (React + Vite + Tailwind)
 
-## Expanding the ESLint configuration
+#### Clone the Repo
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+  git clone https://github.com/Keshavvakul/assignment-EmployWise.git
+  cd assignment-EmployWise
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+#### Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+  npm install
 ```
+
+#### Start the development server
+
+```bash
+  npm run dev
+```
+
+Frontend runs at: http://localhost:5173
+
+## Features
+
+### Authentication System
+
+- Secure login with JWT tokens
+- Protected routes for authenticated users
+- Form validation using Zod
+
+### User Management
+
+- View users in a paginated table
+- Edit user information
+- Delete users with confirmation
+- Sortable columns
+
+### Modern Tech Stack
+
+- React with TypeScript
+- React Query for data fetching and caching
+- React Router for navigation
+- Tailwind CSS for styling
+
+## Usage
+
+### Login
+
+Use the following credentials to log in:
+
+- Email: eve.holt@reqres.in
+- Password: cityslicka
+
+### User Management
+
+After logging in, you'll be redirected to the user management dashboard where you can:
+
+- Browse users with pagination
+- Edit user details
+- Delete users
+
+## API Integration
+
+This project uses the ReqRes API for demonstration purposes:
+
+- Authentication: POST /api/login
+- User listing: GET /api/users?page={page}
+- User update: PUT /api/users/{id}
+- User deletion: DELETE /api/users/{id}
+
+## Technologies Used
+
+- React 18
+- TypeScript
+- React Query
+- React Router
+- Tailwind CSS
+- Shadcn Ui
+- React Hook Form
+- Zod
+- Axios
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- ReqRes for providing a test API
+- Shadcn UI for accessible UI primitives
+- TanStack Query for data fetching
